@@ -13,6 +13,7 @@
   post '/pets' do 
   @pets = Pet.create(params[:pet])
   @owner= Owner.create(params[:owner])
+  @pets.owner = @owner
   binding.pry
   if !params["pet"]["name"].empty?
       @owner.pets << Pet.create(name: params["pet"]["name"])
