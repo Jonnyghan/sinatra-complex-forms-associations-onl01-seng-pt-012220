@@ -23,9 +23,9 @@
     redirect to "pets/#{@pets.id}"
   end
 
-get '/pets/:id/edit' do 
-    @owner = Owner.find_by_id(@pets.owner.id)
-    @pets = Pet.find(params[:id])
+get '/pets/:id/edit' do
+    @pet = Pet.find_by_id(params[:id])
+    @owners = Owner.all
     erb :'/pets/edit'
   end
   
