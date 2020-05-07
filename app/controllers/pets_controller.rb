@@ -16,7 +16,7 @@
   
  # binding.pry
     binding.pry
-  if !params["pet"]["owner_id"].empty?
+  if @pets.owner_id.empty?
       @pets << Owner.create(params["owner"])
     end 
     redirect to "pets/#{@pets.id}"
