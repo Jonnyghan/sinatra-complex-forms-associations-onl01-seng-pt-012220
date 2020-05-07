@@ -13,6 +13,7 @@
   post '/pets' do 
    binding.pry
   @pets = Pet.create(params[:pet])
+  @owner= Owner.create(params[:owner])
     redirect to "pets/#{@pet.id}"
   end
 
