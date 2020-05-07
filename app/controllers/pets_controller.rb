@@ -24,7 +24,7 @@
 
   get '/pets/:id' do 
     @pet = Pet.find(params[:id])
-    binding.pry
+   # binding.pry
     erb :'/pets/show'
   end
 
