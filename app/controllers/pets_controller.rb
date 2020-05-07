@@ -11,8 +11,8 @@
   end
 
   post '/pets' do 
-  @pets = Pet.create(params[:pet])
    binding.pry
+  @pets = Pet.create(params[:pet])
     redirect to "pets/#{@pet.id}"
   end
 
