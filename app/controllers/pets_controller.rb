@@ -17,7 +17,7 @@
  # binding.pry
   if @pets.owner_id == nil
       @pets.owner_id =@owner.id 
-      @pets.save
+      @pets.savePre
     end 
     binding.pry
     redirect to "pets/#{@pets.id}"
