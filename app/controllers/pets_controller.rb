@@ -15,7 +15,7 @@
   @owner= Owner.create(params[:owner])
   
  # binding.pry
-  if @pets.owner_id.empty?
+  if @pets.owner_id == nil
       @pets << Owner.create(params["owner"])
     end 
     binding.pry
