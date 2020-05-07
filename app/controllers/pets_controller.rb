@@ -19,7 +19,7 @@
       @pets.owner_id =@owner.id 
       @pets.savePre
     end 
-    binding.pry
+    #binding.pry
     redirect to "pets/#{@pets.id}"
   end
 
