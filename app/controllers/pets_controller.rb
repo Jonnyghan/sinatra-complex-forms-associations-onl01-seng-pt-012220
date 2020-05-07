@@ -1,4 +1,4 @@
-class PetsController < ApplicationController
+ class PetsController < ApplicationController
 
   get '/pets' do
     @pets = Pet.all
