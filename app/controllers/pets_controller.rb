@@ -15,8 +15,8 @@
   @owner= Owner.create(params[:owner])
   @pets.owner = @owner
  # binding.pry
-  if !params["pet"]["name"].empty?
-      @owner.pets << Pet.create(name: params["pet"]["name"])
+  if !params["pet"]["owner_id"].empty?
+      @pets << Owner.create(params["owner"])
     end 
     redirect to "pets/#{@pets.id}"
   end
