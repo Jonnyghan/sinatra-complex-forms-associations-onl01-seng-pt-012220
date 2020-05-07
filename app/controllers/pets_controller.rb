@@ -12,9 +12,7 @@
 
   post '/pets' do 
   @pets = Pet.create(params[:pet])
-    if !params["owner"]["name"].empty?
-      @pets.owner << Owner.create(name: params["owner"]["name"])
-    end 
+   binding.pry
     redirect to "pets/#{@pet.id}"
   end
 
