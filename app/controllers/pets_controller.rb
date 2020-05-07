@@ -16,7 +16,8 @@
   
  # binding.pry
   if @pets.owner_id == nil
-      @pets << Owner.create(params["owner"])
+      @pets.owner_id =@owner.id 
+      @pets.save
     end 
     binding.pry
     redirect to "pets/#{@pets.id}"
